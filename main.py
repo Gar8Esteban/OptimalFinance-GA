@@ -25,11 +25,11 @@ def f(X):
 
 
 if __name__ == '__main__':
-    varConstraints = np.array([[1, 10],
+    varConstraints = np.array([[0, 10],
                                [0, 10],
-                               [1, 10],
-                               [5, 10],
-                               [5, 10],
+                               [0, 10],
+                               [0, 10],
+                               [0, 10],
                                [0, 10]])
 
     algorithm_param = {'max_num_iteration': 1000,
@@ -45,4 +45,4 @@ if __name__ == '__main__':
                algorithm_parameters=algorithm_param)
     model.run()
 
-    print(f([3, 3, 2, 5, 7, 1]))
+    print(f([1, 7, 0, 2, 10, 1]))
