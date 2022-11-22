@@ -1,4 +1,3 @@
-import math
 import numpy as np
 
 
@@ -14,3 +13,8 @@ class Sequences:
                     combos = np.append(combos, np.array([[i, j]]), axis=0)
 
         return combos
+
+
+if __name__ == '__main__':
+    p = [0, 1, 2]
+    print(Sequences(p).combinations())

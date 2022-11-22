@@ -10,7 +10,7 @@ class BlackBox:
         for f, t, a in transactions:
             score[f] -= a
             score[t] += a
-
+        print(score)
         positives = [v for v in score.values() if v > 0]
         negatives = [v for v in score.values() if v < 0]
         
@@ -46,7 +46,7 @@ class BlackBox:
 
 if __name__ == '__main__':
     moves = [[0, 1, 10], 
-             [1, 2, 1],
+             [1, 0, 1],
              [1, 2, 5],
              [2, 0, 5]]
     
@@ -60,7 +60,7 @@ if __name__ == '__main__':
                   [0, 2, 9],
                   [2, 0, 5],
                   [0, 3, 11]]
-    print(BlackBox().transfers(movesTest2))
+    print(BlackBox().transfers(moves))
    
 
     
